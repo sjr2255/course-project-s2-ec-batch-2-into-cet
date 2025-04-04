@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: image-set("bgg.jpeg");
+            background-size: cover; 
+            
+    }
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgb(34, 204, 29);
+            color: black;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000;
+        }
+
+        .menu {
+            display: none;
+            position: fixed;
+            top: 50px;
+            left: 10px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .menu a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu a:hover {
+            background-color: lightgray;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+        }
+
+        #home {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        function showContent(id) {
+            var sections = document.getElementsByClassName("content");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            document.getElementById(id).style.display = "block";
+            document.getElementById("menu").style.display = "none";
+        }
+
+        window.onload = function() {
+            var sections = document.getElementsByClassName("content");
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";  // Hide all content initially
+            }
+            document.getElementById("home").style.display = "block";  // Show the home content
+        };
+    </script>
+</head>
+<body background="background.jpg" >
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+    <div id="menu" class="menu">
+        <a href="#" onclick="showContent('home')">Home</a>
+        <a href="#" onclick="showContent('ug_programmes')">UG Programmes</a>
+        <a href="#" onclick="showContent('pg_programmes')">PG Programmes</a>
+        <a href="#" onclick="showContent('phd_courses')">PhD Courses</a>
+        <a href="#" onclick="showContent('clubs')">Clubs</a>
+    </div>
+
+    <div id="home" class="content">  
+        <h1 align="center">IN TO THE CET</h1>
+        <p><center><em><font color="red">-the way to glory</font></em></center></p>
+        <marquee behavior="scroll">contact us: 987654321, email:cettrivandrum@gmail.com</marquee>
+        <p> The College of Engineering Trivandrum, commonly shortened to CET, is an engineering college in the Indian state of Kerala, situated in Thiruvananthapuram. Founded in 1939 by the Travancore monarch Chithira Thirunal, it is the state's oldest technical institution. It currently offers undergraduate, graduate and research programs in eight branches of engineering and has been affiliated to the APJ Abdul Kalam Technological University since 2015, prior to which it was part of the University of Kerala.</p><img src="cet.jpeg"><br><br><br><br><br><br><br><br><h4>LOCATION</h4><br><p>For Navigational Assistants</p><a href="  https://maps.app.goo.gl/bJgUjy7kf6JxhZ3M7"> click here </a>
+        <h2>More about us:</h2><br><img src="facility1.jpeg"><img src="facility2.jpeg"><br.<img src="cgpu2.jpeg"><img src="cgpu1.jpeg"><img src="placement.jpeg">
+    </div>
+
+    <div id="ug_programmes" class="content">
+        <h1 align="center">IN TO THE CET</h1><h4>UG Programmes</h4></u><br>
+        <h5><font color="red">ELECTRONICS AND COMMUNICATION ENGINEERING </font></h5><br>
+        <ol type="1"><li>B.Tech in Electronics and Communication Engineering </li><li>B.Tech in Applied Electronics and Instrumentation </li></ol><br><img src="electronics1.jpeg"><br>
+        <h5><font color="red">Electrical and Electronics Department </font></h5><br>
+        <ol type="1"><li>B.Tech in Electrical and Electronics Engineering </li><li>B.TECH in Electrical and Computer Engineering </li></ol><br><img src="electrical1.jpeg"><br>
+        <h5><font color="red">Computer Science and Engineering </font></h5><br>
+        <ol type="1"><li>B.Tech in Computer Science and Engineering </li></ol><br><img src="cs1.jpeg"><br>
+        <h5><font color="red">Civil Department </font></h5><br>
+        <ol type="1"><li>B.Tech in Civil Engineering </li></ol><br><img src="civil1.jpeg"><br>
+        <h5><font color="red">Mechanical Department </font></h5><br>
+        <ol type="1"><li>B.Tech in Mechanical Engineering </li><li>B.Tech in Industrial Engineering </li></ol><br><img src="mech.jpeg"><br>
+        <h5><font color="red">Architecture Department </font></h5><br>
+        <ol type="1"><li>B.Arch</li></ol><br><img src="archi.jpeg"><br>
+        <h5><font color="red">Evening Degree Programmes </font></h5>
+        <p>B.Tech for Working Professionals-<br><ol type="1"><li>Civil Engineering </li><li>Mechanical Engineering</li><li>Electrical and Electronics Engineering </li></ol></p>
+    </div>
+
+    <div id="pg_programmes" class="content">
+        <h1 align="center">IN TO THE CET </h1><h4>PG Programmes </h4></u><br>
+        <h5><font color="red">Computer Application and IT</font></h5><br>
+        <ol type="1"><li>MCA</li><li>M.Tech Computer Science and Engineering </li><li>M.Tech Information Security</li></ol><br>
+        <h5><font color="red">Engineering and Architecture </font></h5><br>
+        <ol type="1"><li>M.Tech Structural Engineering </li><li>M.Tech Applied Electronics and Instrumentation </li><li>M.Tech Artificial Intelligence </li><li>M.Tech Communication Systems</li><li>M.Tech Control Systems </li><li>M.Tech Electrical Machines</li><li>M.Tech Environmental Engineering </li><li>M.Tech Geotechnical Engineering</li><li>M.Tech Guidance and Navigational Control</li><li>M.Tech Hydraulics Engineering </li><li>M.Tech Industrial Engineering </li><li>M.Tech Machine Design</li><li>M.Tech Manufacturing and Automation</li><li>M.Tech Micro and Nano Electronics </li><li>M.Tech Power Electronics </li><li>M.Tech Power Systems </li><li>M.Tech Propulsion Engineering </li><li>M.Tech Robotics and Automation</li><li>M.Tech Signal Processing</li><li>M.Tech Thermal Science</li><li>M.Arch Environmental Design</li><li>M.Arch Urban Design</li><li>M.Plan Housing</li></ol><br>
+        <h5><font color="red">Management and Business Administration </font></h5><br>
+        <ol type="1"><li>MBA</li><li>M.Tech Financial Engineering </li></ol><br>
+        <h5><font color="red">Science</font></h5><br>
+        <ol type="1"><li>M.Tech Geoinformatics </li><li>M.Tech Renewable Energy</li></ol>
+    </div>
+
+    <div id="phd_courses" class="content">
+        <h1 align="center">IN TO THE CET </h1><h4>Doctorate</h4></u><br>
+        <h5><font color="red">Engineering and Architecture</font></h5><br>
+        <ol type="1"><li>Ph.D Computer Science Engineering </li><li>Ph.D Civil Engineering</li><li>Ph.D Electrical Engineering </li><li>Ph.D Electronics and Communication Engineering </li><li>Ph.D Industrial Engineering </li><li>Ph.D Mechanical Engineering</li></ol><br>
+        <h5><font color="red">Management and Business Administration </font></h5><br>
+        <ol type="1"><li>Ph.D Business Administration </li></ol>
+    </div>
+
+    <div id="clubs" class="content">
+        <h1 align="center">IN TO THE CET </h1><h4>Students Club/Organizations</h4>
+        <p>College of Engineering Thiruvananthapuram has 36 Officially recognized student clubs ranging from technical to non-technical. They are:</p><br>
+        <dl>
+            <dt>1.IEE SB CET</dt><dd>IEEE activities in CET were initiated on 15 June 1983 as student branch under the Kerala section. In 2000, it hosted the Student Professional Awareness Conference (SPAC 2000) in Technopark with many notable speakers from the Information Technology domain. It was revived in the year 2008. As of January 2012, CET IEEE Student Branch has around 100 student members. The Student Branch has a library. One affinity group called IEEE Women in Engineering is running under this Student Branch and six societies. The student branch won many prizes as well as represented the college in many international avenues, including the best website award in the Asia Pacific region in 2010, represented Kerala in the Asia Pacific Student Congress at New Zealand, won prizes in the student poster and paper contest at the Global Humanitarian Technology conference at Seattle etc. The team of student branch officers consists of chair, vice-chair, treasurer and secretary.</dd><dt>2. SAEINDIA CET</dt><dd>CET also has a student chapter of SAE- the Society of Automotive Engineers, the century-old society Thomas Alva Edison, Henry Ford and numerous other greats were members of. Students from CET have participated in SAE INDIA National competitions like the Baja and Efficycle. SAE INDIA CET regularly holds educative sessions on automotive technology- from bicycles and skateboards to trains and rockets. The student chapter also trains students in CAD. There are 4 clubs under SAEINDIA CET namely FARRAGO, Zenith, Excelerators & Herakles.</dd><dt>3. IET</dt><dd>The Institution of Engineering and Technology is one of the world's leading professional societies for the engineering and technology community, with more than 160,000 members in 127 countries and offices in Europe, North America and Asia-Pacific. The Institution of Engineering and Technology Students chapter in College of Engineering was initiated in 2009. The IET CET has a library and an embedded systems research lab at the college. It has over 125 members in the college. The IET Chapter in the college won the Best Chapter Award under the Chennai Local Network in 2009. The chapter's activities include conducting workshops, seminars and technical competitions. Innovation Challenge is an annual event hosted by the chapter to ignite the innovation passion among the engineering Students of Kerala.</dd><dt>4. ISTE SC CET</dt><dd>The Indian Society for Technical Education Student Chapter is the largest technical society in the college with more than 80% of the student body as its members.</dd><dt>5. RoboCET</dt><dd>RoboCET is the robotics club of CET formed by a group of robotic enthusiasts among the students of the college. RoboCET was established in April 2008. The activities of this club include conducting classes, workshops and exhibitions on robotics. RoboCET has organised various robotics competitions inside and outside the college.</dd><dt>6.IEDC CET</dt><dd>The Innovation & Entrepreneurship Development Cell (IEDC) is a fully functioning student body registered under the Technology Business Incubator (TBI) of the College of Engineering Trivandrum. The club provides a platform for students with ideas to convert them into business reality. The stated aim of IEDC is to foster a student start-up culture in the institution. Club activities include seminars by firms such as Blackberry, classes on the basics of the Stock Market, sponsorship activities, talks with prominent start up ventures and trips to events all over India like Hackathons and Entrepreneurship Conferences. The Cell, started in late 2011, already has 3 start-ups registered under it.</dd><dt>7.National Cadet Corps</dt><dd>A Naval NCC unit was formed in 2020 under 1(K)naval battalion with allotted strength of 50 a year.</dd><dt>8.NSS CET</dt><dd>The National Service Scheme primarily stands for channelising the student youth for building the nation. The youth in all ages has been in the vanguard of progress and social change. On 18 October 2006 NSS CET (with unit no. 147) was inaugurated. NSS is now the most active organisation in the college. NSS cet is now capable of conducting even more than 25 programmes a year in midst of a busy academic schedule. Also from a bunch of students at the time of formation, the number of NSS volunteers is now more than a hundred. Also NSS cet is now an established one with a website and a special room for its activities. Last year NSS even came up with an alumni section, a rare thing for an organisation in college. As part of the new requirement of A.P.J. Kalam Technological University, a new unit of NSS was started.</dd><dt>9.CET BBC club</dt><dd>BBC CET is a club that was an initiative of the CET Alumni Association. Founded on 30 October 2020, the club aims to empower and uplift students in any way that the students require, primarily through confidence-building activities and other sessions.</dd><dt>10.Innovation Centre</dt><dd>The Innovation Centre is a lab facility operated for the students by the students of CET. It was established in May 2012 and has become the den of geeks and Greeks in the college. Unlike most other technical organisations in the college, Innovation centre is government funded (by CERD). The Innovation Centre is open 24 x 7, with supervision. The facility also organises talks and training sessions in technical activities and also acts as a think tank where students meet to discuss their ideas on technical advances. In addition to it activities within the college, Innovation Centre CET hosts EUREKA, a statewide project competition annually. It is also a guidance center where students get advice and help for their projects and tech related activities. Working in unison with the IPR cell and the Technology Business Incubation (TBI) facility, the Innovation Centre also helps students in patenting and marketing the technologies they develop.</dd><dt>11.CET Quiz Club</dt><dd>CET Quiz Club is one of the oldest and most active club in CET. CET QC conducts weekly informal sessions and other regular quizzing events in college. The club also organizes the inter college and open quiz competitions during Dhwani (Cultural fest) and Drishti (Tech fest), among others. One of the most awaited annual quizzing event, Eroteme, is conducted by the QC and attended by quizzers in and out of the state. Quiz Master Major Chandrakant Nair has hosted all 4 editions of Eroteme.</dd><dt>12.CET Film Society</dt><dd>The official film club of College of Engineering Trivandrum, which conducts student film festivals, panel discussions, film reviews, short film competitions, etc. in the college. The club has an active presence among the students through the social media.</dd><dt>13.H2O CET</dt><dd>H2O CET is the official CET student wing of Helping Hands Organisation, NGO based out of Thiruvananthapuram, that focuses on autism and disability Rehabilitation along with providing holistic education to underprivileged children. With a volunteer strength of more than 100, many college level events are organized for fund raising for the NGO. Along with that student volunteers take active participation in weekly classes and elderly help initiatives.</dd><dt>14.LitSoc CET</dt><dd>LitSoCET, short for Literary Society CET facilitates the literary and debate aspirations of students. The annual literary fest, Carpe Dictum is organised as a part of Dhwani. Litsoc also organises MUNs on an annual basis.</dd><dt>15.CETalks</dt><dd>CETALKS is the original in- house talk show of College of Engineering, Thiruvananthapuram. It was a talk series program that was founded in January 2015 during the 75th anniversary celebrations of the college. Cetalks is also the name of the college's official radio. New shows are aired occasionally at 9 pm on weekends.</dd><dt>16.CET Shutterbugs</dt><dd>The official photography club of College of Engineering Thiruvananthapuram.</dd><dt>17.SCORE@CET</dt><dd>It is the official research & publication club of CET.</dd><dt>18.AstroCET</dt><dd>AstroCET, founded in 2019, is the astronomy club at the College of Engineering Trivandrum (CET).</dd><dt>19.AeroCET</dt><dt>20.Google Developer Student Club CET</dt><dt>21.IGS CET</dt><dt>22.ICI CET STUDENT CHAPTER</dt><dt>23.American society of civil engineers</dt><dt>24.Mathletes CET</dt><dt>25.TinkerHub CET</dt><dt>26.Amateur Radio Club</dt><dt>27.Malayalam Club CET</dt><dt>28.Under 25 CET</dt><dt>29.Coders Club</dt><dt>30.CHATURANGA CET</dt><dt>31.WATCH THE FREAKZ</dt><dt>32.Internship Cell CET</dt><dt>33.Intellectual Property Rights Cell</dt><dt>34.PRISM CET</dt><dt>35.CETunes</dt><dt>36.Investor CET</dt></dl>
+            
+        </dl>
+    </div>
+</body>
+</html>
